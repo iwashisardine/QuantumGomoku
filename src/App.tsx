@@ -215,7 +215,7 @@ export default function Game() {
       const nextSquares = history[currentMove - 1].slice();
       const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
       setHistory(nextHistory);
-      setCurrentMove(nextHistory.length - 1);
+      setCurrentMove(nextHistory.length - 3);
       setIsObserved(!isObserved);
     } else {
       const observedSquares = currentSquares.slice();
