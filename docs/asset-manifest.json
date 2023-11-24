@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/QuantumGomoku/static/css/main.8486a5bd.css",
+    "main.js": "/QuantumGomoku/static/js/main.167b3536.js",
+    "static/js/787.d1b4501d.chunk.js": "/QuantumGomoku/static/js/787.d1b4501d.chunk.js",
+    "index.html": "/QuantumGomoku/index.html",
+    "main.8486a5bd.css.map": "/QuantumGomoku/static/css/main.8486a5bd.css.map",
+    "main.167b3536.js.map": "/QuantumGomoku/static/js/main.167b3536.js.map",
+    "787.d1b4501d.chunk.js.map": "/QuantumGomoku/static/js/787.d1b4501d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8486a5bd.css",
+    "static/js/main.167b3536.js"
+  ]
+}
