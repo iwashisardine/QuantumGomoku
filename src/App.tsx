@@ -146,10 +146,11 @@ const Board = ({ history, currentMove, isObserved, observationCount, p1, p2, onP
     if(squares[i]) return; // 置かれているならスキップ
     const nextSquares = squares.slice();
     let whatIsNext = 90;
-    if(currentMove % 4 === 0) whatIsNext = p1;
-    else if(currentMove % 4 === 1) whatIsNext = 100 - p1;
-    else if(currentMove % 4 === 2) whatIsNext = p2;
-    else if(currentMove % 4 === 3) whatIsNext = 100 - p2;
+    const adjustment = 2 * (observationCount[0] + observationCount[1]);
+    if((currentMove - adjustment) % 4 === 0) whatIsNext = p1;
+    else if((currentMove - adjustment) % 4 === 1) whatIsNext = 100 - p1;
+    else if((currentMove - adjustment) % 4 === 2) whatIsNext = p2;
+    else if((currentMove - adjustment) % 4 === 3) whatIsNext = 100 - p2;
     nextSquares[i] = whatIsNext;
     onPlay(nextSquares);
   } 
@@ -215,7 +216,7 @@ export default function Game() {
       const nextSquares = history[currentMove - 1].slice();
       const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
       setHistory(nextHistory);
-      setCurrentMove(nextHistory.length - 3);
+      setCurrentMove(nextHistory.length - 1);
       setIsObserved(!isObserved);
     } else {
       const observedSquares = currentSquares.slice();
